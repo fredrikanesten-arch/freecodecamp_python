@@ -1,0 +1,21 @@
+** start of main.py **
+
+def fibonacci(n):
+    sequence = [0, 1]
+
+    # Handle base cases
+    if n == 0:
+        return 0
+    if n == 1:
+        return 1
+
+    # Build sequence up to index n-1
+    for i in range(2, n + 1):
+        next_value = sequence[i-1] + sequence[i-2]
+        sequence.append(next_value)
+
+    # The lab requires the n-th value to be at index n-1
+    return sequence[n]
+
+** end of main.py **
+
